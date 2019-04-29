@@ -50,10 +50,9 @@ input[type="number"] {
 }
 
 ul.kategorije {
-  height: 150px;
+  height: 180px;
   overflow: auto;
   padding: 0 15px;
-  padding-top: 15px;
 }
 
 .kategorije li {
@@ -83,11 +82,12 @@ ul.kategorije {
   background-color: #eee;
   border: 1px solid #aaa;
   padding: 15px;
+  padding-top: 0;
   box-shadow: 1px 1px 3px #aaa;
 }
 
 ul.vjezbe {
-  height: 165px;
+  height: 180px;
   overflow: auto;
 }
 
@@ -116,5 +116,5 @@ ul.vjezbe {
 }
 
 .nova-kategorija h4, .nova-vjezba h4 {
-  margin-top: 10px;
+  margin: 10px 0;
 }
