@@ -1,0 +1,8 @@
+{
+  "jsxBracketSameLine": false,
+  "htmlWhitespaceSensitivity": "ignore",
+  "bracketSpacing": true,
+  "useTabs": false,
+  "printWidth": 80,
+  "semi": true
+}

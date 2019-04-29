@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Baza Vježbi V1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script async src="app.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <h1>Baza Vježbi V1</h1>
+      <hr />
+
+      <div class="kategorije-container">
+        <h2>Kategorije</h2>
+        <div>
+          <ul class="kategorije">
+            <!-- TODO: ukloniti ove hardkodirane vrijednosti -->
+            <li>
+              <a href="#Ruke">Ruke</a>
+              <input type="button" value="Ukloni" />
+            </li>
+            <li>
+              <a href="#Noge">Noge</a>
+              <input type="button" value="Ukloni" />
+            </li>
+            <li>
+              <a href="#Trbuh">Trbuh</a>
+              <input type="button" value="Ukloni" />
+            </li>
+            <li>
+              <a href="#Leđa">Leđa</a>
+              <input type="button" value="Ukloni" />
+            </li>
+            <li>
+              <a href="#Ramena">Ramena</a>
+              <input type="button" value="Ukloni" />
+            </li>
+          </ul>
+
+          <div class="clearfix"></div>
+
+          <div class="nova-kategorija">
+            <h4>Nova kategorija</h4>
+            <div>
+              <label for="tbKateogrijaNaziv">Naziv:</label>
+              <div>
+                <input
+                  type="text"
+                  name="tbKateogrijaNaziv"
+                  id="tbKateogrijaNaziv"
+                />
+              </div>
+            </div>
+
+            <div>
+              <input
+                type="button"
+                value="Dodaj"
+                id="btnDodajKategoriju"
+                class="btn-dodaj-kategoriju"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vjezbe-container">
+        <h2>Vježbe (u kategoriji)</h2>
+        <div>
+          <ul class="vjezbe">
+            <!-- TODO: ukloniti ovu hardkodiranu vrijednost -->
+            <li class="vjezba">
+              <div>
+                <h4 class="naziv">Vježba 1</h4>
+                <input type="button" value="Ukloni" class="btn-ukloni-vjezbu" />
+                <div class="clearfix"></div>
+              </div>
+              <div>
+                <span class="broj-ponavljanja">3x</span>
+              </div>
+              <div>
+                <p class="opis">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt nisi ducimus quo possimus reiciendis pariatur tempora
+                  similique impedit suscipit. Officiis facere voluptatem ea.
+                  Exercitationem, hic ipsam labore laboriosam molestiae
+                  distinctio.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="nova-vjezba">
+            <h4>Nova vježba</h4>
+            <div>
+              <div class="naziv-container">
+                <label for="tbVjezbaNaziv">Naziv:</label>
+                <div>
+                  <input type="text" name="tbVjezbaNaziv" id="tbVjezbaNaziv" />
+                </div>
+              </div>
+
+              <div class="broj-ponavljanja-container">
+                <label for="tbVjezbaPonavljanja">Broj ponavljanja:</label>
+                <div>
+                  <input
+                    type="number"
+                    step="1"
+                    min="1"
+                    value="1"
+                    name="tbVjezbaPonavljanja"
+                    id="tbVjezbaPonavljanja"
+                  /> x
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label for="taVjezbaOpis">Opis:</label>
+              <div>
+                <textarea
+                  name="taVjezbaOpis"
+                  id="taVjezbaOpis"
+                  style="resize: none; width: 97%;"
+                ></textarea>
+              </div>
+            </div>
+
+            <div>
+              <input type="button" value="Dodaj" id="btnDodajVjezbu" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <hr />
+      <footer>
+        Autor: Vedran Mandić
+      </footer>
+    </div>
+  </body>
+</html>

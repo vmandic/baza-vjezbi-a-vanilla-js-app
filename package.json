@@ -1,0 +1,20 @@
+{
+  "name": "baza-vjezbi-v1",
+  "version": "1.0.0",
+  "description": "HTML static app for managing a local database of exercises.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "static",
+    "app",
+    "javascript"
+  ],
+  "author": "Vedran Mandić",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}

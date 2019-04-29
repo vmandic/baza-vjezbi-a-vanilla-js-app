@@ -1,0 +1,120 @@
+html {
+  font-size: 16px;
+  font-family: "Calibri", Verdana, sans-serif;
+}
+
+ul {
+  margin: 5px 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+textarea {
+  min-width: 150px;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #aaa;
+  outline: none;
+}
+input[type="button"] {
+  margin: 5px 0;
+  font-size: 1.2em;
+  border: 1px solid black;
+  cursor: pointer;
+  box-shadow: #aaa 1px 1px 1px;
+}
+input[type="text"],
+input[type="number"] {
+  padding: 5px;
+  margin: 5px 0;
+  min-width: 150px;
+  border: 1px solid #aaa;
+  outline: none;
+}
+
+.clearfix {
+  clear: both;
+}
+.kategorije-container {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+.kategorije-container > div {
+  border: 1px solid #aaa;
+  background-color: #eee;
+  box-shadow: 1px 1px 3px #aaa;
+}
+
+ul.kategorije {
+  height: 150px;
+  overflow: auto;
+  padding: 0 15px;
+  padding-top: 15px;
+}
+
+.kategorije li {
+  clear: both;
+}
+.kategorije li a {
+  float: left;
+  line-height: 38px;
+}
+.kategorije li input {
+  float: right;
+}
+
+.nova-kategorija {
+  background-color: #ddd;
+  border: 15px solid #eee;
+  padding: 5px 10px;
+}
+
+.vjezbe-container {
+  float: right;
+  width: 60%;
+  margin-right: 5%;
+}
+
+.vjezbe-container > div {
+  background-color: #eee;
+  border: 1px solid #aaa;
+  padding: 15px;
+  box-shadow: 1px 1px 3px #aaa;
+}
+
+ul.vjezbe {
+  height: 165px;
+  overflow: auto;
+}
+
+.vjezba {
+  padding-right: 15px;
+}
+
+.vjezba h4.naziv {
+  float: left;
+  margin-top: 10px;
+}
+
+.vjezbe-container .naziv-container,
+.vjezbe-container .broj-ponavljanja-container {
+  width: auto;
+  display: inline-block;
+}
+
+.nova-vjezba {
+  background-color: #ddd;
+  padding: 5px 10px;
+}
+
+.btn-ukloni-vjezbu {
+  float: right;
+}
+
+.nova-kategorija h4, .nova-vjezba h4 {
+  margin-top: 10px;
+}
