@@ -30,7 +30,7 @@ input[type="text"],
 input[type="number"] {
   padding: 5px;
   margin: 5px 0;
-  min-width: 150px;
+  min-width: 120px;
   border: 1px solid #aaa;
   outline: none;
 }
@@ -53,6 +53,8 @@ ul.kategorije {
   height: 180px;
   overflow: auto;
   padding: 0 15px;
+  margin: 0;
+  border-bottom: 1px solid #aaa;
 }
 
 .kategorije li {
@@ -81,18 +83,23 @@ ul.kategorije {
 .vjezbe-container > div {
   background-color: #eee;
   border: 1px solid #aaa;
-  padding: 15px;
-  padding-top: 0;
   box-shadow: 1px 1px 3px #aaa;
 }
 
 ul.vjezbe {
   height: 180px;
   overflow: auto;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
 }
 
 .vjezba {
-  padding-right: 15px;
+  padding: 0 15px;
+  border-bottom: 1px solid #aaa;
+}
+
+.vjezba:last-child {
+  border-bottom: none;
 }
 
 .vjezba h4.naziv {
@@ -109,6 +116,7 @@ ul.vjezbe {
 .nova-vjezba {
   background-color: #ddd;
   padding: 5px 10px;
+  margin: 15px;
 }
 
 .btn-ukloni-vjezbu {

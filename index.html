@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Baza Vježbi V1</title>
     <link rel="stylesheet" href="style.css" />
-    <script async src="app.js"></script>
   </head>
   <body>
     <div class="app">
@@ -17,27 +16,10 @@
         <h2>Kategorije</h2>
         <div>
           <ul class="kategorije">
-            <!-- TODO: ukloniti ove hardkodirane vrijednosti -->
-            <li>
+            <!-- <li>
               <a href="#Ruke">Ruke</a>
               <input type="button" value="Ukloni" />
-            </li>
-            <li>
-              <a href="#Noge">Noge</a>
-              <input type="button" value="Ukloni" />
-            </li>
-            <li>
-              <a href="#Trbuh">Trbuh</a>
-              <input type="button" value="Ukloni" />
-            </li>
-            <li>
-              <a href="#Leđa">Leđa</a>
-              <input type="button" value="Ukloni" />
-            </li>
-            <li>
-              <a href="#Ramena">Ramena</a>
-              <input type="button" value="Ukloni" />
-            </li>
+            </li> -->
           </ul>
 
           <div class="clearfix"></div>
@@ -45,12 +27,12 @@
           <div class="nova-kategorija">
             <h4>Nova kategorija</h4>
             <div>
-              <label for="tbKateogrijaNaziv">Naziv:</label>
+              <label for="tbKategorijaNaziv">Naziv:</label>
               <div>
                 <input
                   type="text"
-                  name="tbKateogrijaNaziv"
-                  id="tbKateogrijaNaziv"
+                  name="tbKategorijaNaziv"
+                  id="tbKategorijaNaziv"
                 />
               </div>
             </div>
@@ -68,29 +50,28 @@
       </div>
 
       <div class="vjezbe-container">
-        <h2>Vježbe (u kategoriji)</h2>
+        <h2>
+          Vježbe u kategoriji: "<span id="trenutna-kategorija"></span>"
+        </h2>
         <div>
           <ul class="vjezbe">
-            <!-- TODO: ukloniti ovu hardkodiranu vrijednost -->
-            <li class="vjezba">
+            <!-- <li class="vjezba">
               <div>
                 <h4 class="naziv">Vježba 1</h4>
                 <input type="button" value="Ukloni" class="btn-ukloni-vjezbu" />
                 <div class="clearfix"></div>
               </div>
-              <div>
-                <span class="broj-ponavljanja">3x</span>
+              <div class="broj-ponavljanja">
+                3x
               </div>
-              <div>
-                <p class="opis">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Deserunt nisi ducimus quo possimus reiciendis pariatur tempora
-                  similique impedit suscipit. Officiis facere voluptatem ea.
-                  Exercitationem, hic ipsam labore laboriosam molestiae
-                  distinctio.
-                </p>
-              </div>
-            </li>
+              <p class="opis">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt nisi ducimus quo possimus reiciendis pariatur tempora
+                similique impedit suscipit. Officiis facere voluptatem ea.
+                Exercitationem, hic ipsam labore laboriosam molestiae
+                distinctio.
+              </p>
+            </li> -->
           </ul>
 
           <div class="nova-vjezba">
@@ -144,5 +125,6 @@
         Autor: Vedran Mandić
       </footer>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
