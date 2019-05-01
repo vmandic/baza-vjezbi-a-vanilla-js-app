@@ -1,6 +1,14 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/625a005a-2712-4b67-8ef1-a91ad6b68fa9/deploy-status)](https://app.netlify.com/sites/baza-vjezbi/deploys)
+
 # `Baza Vježbi` - A vanilla.js example application
 
 An experimental application to demonstrate what is it like to write ES5-ish JavaScript code without an external npm library, view engine libraries and without babel or TypeScript transpilers.
+
+## Try the app online
+
+The app is hosted on netlify.com hosting service as simple static web site, due to the fact it has only three files: `index.html`, `app.js` and `style.css`.
+
+**Visit and try out at: <https://baza-vjezbi.netlify.com/>**
 
 ## App screenshot
 
