@@ -1,6 +1,6 @@
 "use strict";
 
-var app = function () {
+var app = function() {
   var btnNewCateogry = document.getElementById("btnDodajKategoriju");
   var tbNewCategoryName = document.getElementById("tbKategorijaNaziv");
   var ulCategories = document.querySelector("ul.kategorije");
@@ -39,10 +39,10 @@ var app = function () {
       anchor.innerHTML = name;
       anchor.onclick = setCurrentCategoryAndRenderToUi;
 
-      var btn = document.createElement("input");
-      btn.type = "button";
-      btn.value = "Ukloni";
-      btn.onclick = function(btnSender) {
+      var btnRemoveCategory = document.createElement("input");
+      btnRemoveCategory.type = "button";
+      btnRemoveCategory.value = "Ukloni";
+      btnRemoveCategory.onclick = function(btnSender) {
         var categoryToRemove = btnSender.target.previousSibling.innerHTML;
         var removeOnIndex = categories.findIndex(function(c) {
           return c.name == categoryToRemove;
@@ -59,7 +59,7 @@ var app = function () {
 
       var li = document.createElement("li");
       li.appendChild(anchor);
-      li.appendChild(btn);
+      li.appendChild(btnRemoveCategory);
 
       return li;
     };
@@ -79,20 +79,17 @@ var app = function () {
       h4Name.innerHTML = name;
       h4Name.classList = "naziv";
 
-      var btn = document.createElement("input");
-      btn.type = "button";
-      btn.value = "Ukloni";
-      btn.classList = "btn-ukloni-vjezbu";
-      btn.onclick = function(btnSender) {
+      var btnRemoveExercise = document.createElement("input");
+      btnRemoveExercise.type = "button";
+      btnRemoveExercise.value = "Ukloni";
+      btnRemoveExercise.classList = "btn-ukloni-vjezbu";
+      btnRemoveExercise.onclick = function(btnSender) {
         var exerciseToRemove = btnSender.target.previousSibling.innerHTML;
         var removeOnIndex = currentCategory.exercises.findIndex(function(ex) {
           return ex.name == exerciseToRemove;
         });
 
-        currentCategory.exercises.splice(
-          removeOnIndex,
-          removeOnIndex + 1
-        );
+        currentCategory.exercises.splice(removeOnIndex, removeOnIndex + 1);
         btnSender.target.parentElement.parentElement.remove();
       };
 
@@ -102,7 +99,7 @@ var app = function () {
       var nameAndBtnDiv = document.createElement("div");
 
       nameAndBtnDiv.appendChild(h4Name);
-      nameAndBtnDiv.appendChild(btn);
+      nameAndBtnDiv.appendChild(btnRemoveExercise);
       nameAndBtnDiv.appendChild(clearfix);
 
       var repsDiv = document.createElement("div");
@@ -124,6 +121,21 @@ var app = function () {
   };
 
   btnNewCateogry.onclick = function() {
+    if (tbNewCategoryName.value.trim().length < 1) {
+      alert("Niste unijeli naziv kategorije.");
+      return;
+    }
+
+    var exerciseExist = categories.some(function(cat) {
+      cat.name.toLowerCase().trim() ==
+        tbNewCategoryName.value.toLowerCase().trim();
+    });
+
+    if (exerciseExist) {
+      alert("Kategorija s odabranim nazivom već postoji.");
+      return;
+    }
+
     var newCategory = new Category(tbNewCategoryName.value);
 
     categories.push(newCategory);
@@ -131,6 +143,23 @@ var app = function () {
   };
 
   btnNewExercise.onclick = function() {
+    if (tbNewExerciseName.value.trim().length < 1) {
+      alert("Niste unijeli naziv vježbe.");
+      return;
+    }
+
+    var exerciseExists = currentCategory.exercises.some(function(ex) {
+      return (
+        ex.name.toLowerCase().trim() ==
+        tbNewExerciseName.value.toLowerCase().trim()
+      );
+    });
+
+    if (exerciseExists) {
+      alert("Vježba s odabranim nazivom već postoji u trenutnoj kategoriji.");
+      return;
+    }
+
     var newExercise = new Exercise(
       tbNewExerciseName.value,
       tbNewExerciseReps.value,
